@@ -1,0 +1,30 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+<button (click)="focusOn(null)">Focus None</button>
+<button (click)="focusOn('A')">Focus A</button>
+<button (click)="focusOn('B')">Focus B</button>
+<button (click)="focusOn('C')">Focus C</button>
+<button (click)="focusOn('D')">Focus D</button>
+
+<hr/>
+
+<div *ngIf="focused == 'A'">
+  <input placeholder="Input A"/>
+</div>
+
+<div *ngIf="focused == 'B'">
+  <input appAutofocus placeholder="Input B"/>
+</div>
+
+<div *ngIf="focused == 'C'">
+  <input appAutofocus placeholder="Input C - 1"/>
+  <input placeholder="Input C - 2"/>
+</div>
+
+
+<div *ngIf="focused == 'D'">
+  <input appAutofocus placeholder="Input D - 1"/>
+  <input appAutofocus placeholder="Input D - 2"/>
+</div>
